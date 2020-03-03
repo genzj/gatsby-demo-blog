@@ -95,3 +95,12 @@ Here are some places to start:
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Reference Guides_ and _Gatsby API_ sections in the sidebar.
+
+### AWS CodePipeline
+
+An [AWS code pipeline](https://docs.aws.amazon.com/codepipeline/?id=docs_gateway) has been setup for this project. Any
+pushing to github triggers the pipeline. One (with proper AWS credential of course) can watch the pipeline building by:
+
+```sh
+aws logs tail --follow --since 5m gatsby-demo-blog-build
+```
